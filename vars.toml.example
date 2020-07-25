@@ -1,0 +1,18 @@
+["variables.json"]
+vcenter_server = "vault:secret/packer/ubuntu2004:vcenter_server"
+vcenter_username = "vault:secret/packer/ubuntu2004:vcenter_username"
+vcenter_password = "vault:secret/packer/ubuntu2004:vcenter_password"
+vcenter_cluster = "vault:secret/packer/ubuntu2004:vcenter_cluster"
+vcenter_network = "vault:secret/packer/ubuntu2004:vcenter_network"
+vcenter_datastore = "vault:secret/packer/ubuntu2004:vcenter_datastore"
+vcenter_iso_datastore = "HDD1"
+vcenter_iso_path ="ISO/ubuntu-20.04-legacy-server-amd64.iso"
+vm_name = "ubuntu-2004-base"
+vm_disk = "32768"
+vm_cpus = "2"
+vm_memory= "4096"
+preceed_port = "vault:secret/packer/ubuntu2004:preceed_port"
+packer_password = "vault:secret/packer-templates/ubuntu-2004-base:password"
+
+["http\preseed.cfg"]
+packer_password = "vault:secret/packer-templates/ubuntu-2004-base:password"
