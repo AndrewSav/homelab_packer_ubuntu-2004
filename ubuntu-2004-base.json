@@ -19,11 +19,12 @@
       "convert_to_template": "true",
       "datastore": "{{user `vcenter_datastore`}}",
       "disk_controller_type": "pvscsi",
-      "folder": "Templates",
+      "folder": "{{user `vcenter_folder`}}",
       "guest_os_type": "ubuntu64Guest",
       "http_directory": "http",
-      "http_port_max": "{{user `preseed_port`}}",
-      "http_port_min": "{{user `preseed_port`}}",
+      "http_ip": "{{user `preseed_http_ip`}}",
+      "http_port_max": "{{user `preseed_port_max`}}",
+      "http_port_min": "{{user `preseed_port_min`}}",
       "insecure_connection": "true",
       "iso_paths": [
         "[{{user `vcenter_iso_datastore`}}] {{user `vcenter_iso_path`}}"
